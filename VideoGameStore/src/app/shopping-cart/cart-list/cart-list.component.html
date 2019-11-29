@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-5 d-flex align-items-center text-center">
+            <h3>Product</h3></div>
+        <div class="col-2 d-flex align-items-center text-center"><h3>Price</h3></div>
+        <div class="col-3 d-flex align-items-center text-center"><h3>Quantity</h3></div>
+        <div class="col-2 d-flex align-items-center text-center"><h3>Total</h3></div>
+    </div>
+    <div *ngFor="let item of cartItems">
+        <app-cart-item [product]="item"></app-cart-item>
+    </div>
+</div>

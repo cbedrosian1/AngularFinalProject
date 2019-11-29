@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StoreService } from 'src/app/services/store.service';
+import { Product } from 'src/app/shared/models/product.model';
 
 @Component({
   selector: 'app-accessories-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccessoriesListComponent implements OnInit {
 
-  constructor() { }
+  accessories: Product[];
+  constructor(private service: StoreService) { }
 
   ngOnInit() {
+    this.service.getAccessories().subscribe(accessories => {
+      this.accessories = accessories;
+    }
+    );
   }
 
 }

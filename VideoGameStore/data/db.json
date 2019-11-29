@@ -1,79 +1,146 @@
 {
-    "videoGames": [
-        {
-            "id": 1,
-            "title": "Call of Duty: Modern Warfare",
-            "price": 59.99,
-            "image": "../../assets/videoGameImages/codMW.jpg",
-            "description": "Newest game in the Call of Duty series",
-            "platform": "xbox"
-
-        },
-        {
-            "id": 2,
-            "title": "Zelda: Breath of the Wild",
-            "price": 59.99,
-            "image": "../../assets/videoGameImages/botw.jpeg",
-            "description": "Best of the series. Voted game of the year",
-            "platform": "wii"
-        },
-        {
-            "id": 3,
-            "title": "Apex Legends",
-            "price": 59.99,
-            "image": "../../assets/videoGameImages/apex.jpg",
-            "description": "Play with your friends and be the last ones standing",
-            "platform": "xbox"
-        },
-        {
-            "id": 4,
-            "title": "Star Wars Jedi: Fallen Order",
-            "price": 59.99,
-            "image": "../../assets/videoGameImages/starwars.jpg",
-            "description": "Excellent Single Player Campaign",
-            "platform": "xbox"
-        },
-        {
-            "id": 5,
-            "title": "Borderlands 3",
-            "price": 59.99,
-            "image": "../../assets/videoGameImages/borderlands3.jpg",
-            "description": "Newest in the series. Crazier than the first two",
-            "platform": "xbox"
-        }
-    ],
-    "accessories": [
-        {
-            "id": 1,
-            "title": "Xbox Controller",
-            "price": 19.99,
-            "image": "../../assets/videoGameImages/codMW.jpg",
-            "description": "Standard Xbox controller",
-            "platform": "xbox"
-        },
-        {
-            "id": 2,
-            "title": "Elite Xbox Controller",
-            "price": 49.99,
-            "image": "../../assets/videoGameImages/codMW.jpg",
-            "description": "Elite Xbox controller",
-            "platform": "xbox"
-        },
-        {
-            "id": 3,
-            "title": "Playstation Controller",
-            "price": 19.99,
-            "image": "../../assets/videoGameImages/codMW.jpg",
-            "description": "Standard Playstation controller",
-            "platform": "playstation"
-        },
-        {
-            "id": 4,
-            "title": "Elite Playstation Controller",
-            "price": 49.99,
-            "image": "../../assets/videoGameImages/codMW.jpg",
-            "description": "Elite Playstation controller",
-            "platform": "playstation"
-        }
-    ]
+  "videoGames": [
+    {
+      "id": 1,
+      "name": "Call of Duty: Modern Warfare",
+      "price": 49.99,
+      "image": "../../assets/videoGameImages/codMW.jpg",
+      "description": "Newest game in the Call of Duty series",
+      "platform": "xbox"
+    },
+    {
+      "id": 2,
+      "name": "Zelda: Breath of the Wild",
+      "price": 49.99,
+      "image": "../../assets/videoGameImages/botw.jpeg",
+      "description": "Best of the series. Voted game of the year",
+      "platform": "wii"
+    },
+    {
+      "id": 3,
+      "name": "Apex Legends",
+      "price": 49.99,
+      "image": "../../assets/videoGameImages/apex.jpg",
+      "description": "Play with your friends and be the last ones standing",
+      "platform": "xbox"
+    },
+    {
+      "id": 4,
+      "name": "Star Wars Jedi: Fallen Order",
+      "price": 59.99,
+      "image": "../../assets/videoGameImages/starwars.jpg",
+      "description": "Excellent Single Player Campaign",
+      "platform": "xbox"
+    },
+    {
+      "id": 5,
+      "name": "Borderlands 3",
+      "price": 59.99,
+      "image": "../../assets/videoGameImages/borderlands3.jpg",
+      "description": "Newest in the series. Crazier than the first two",
+      "platform": "xbox"
+    }
+  ],
+  "accessories": [
+    {
+      "id": 1,
+      "name": "Xbox Controller",
+      "price": 19.99,
+      "image": "../../assets/accessoryImages/xboxController.jpg",
+      "description": "Standard Xbox controller",
+      "platform": "xbox"
+    },
+    {
+      "id": 2,
+      "name": "Elite Xbox Controller",
+      "price": 49.99,
+      "image": "../../assets/accessoryImages/xboxEliteController.jpg",
+      "description": "Elite Xbox controller",
+      "platform": "xbox"
+    },
+    {
+      "id": 3,
+      "name": "Playstation Controller",
+      "price": 19.99,
+      "image": "../../assets/accessoryImages/playstationController.jpg",
+      "description": "Standard Playstation controller",
+      "platform": "playstation"
+    },
+    {
+      "id": 4,
+      "name": "Elite Playstation Controller",
+      "price": 49.99,
+      "image": "../../assets/accessoryImages/playstationEliteController.jpg",
+      "description": "Elite Playstation controller",
+      "platform": "playstation"
+    },
+    {
+      "id": 5,
+      "name": "Xbox Headset",
+      "price": 79.99,
+      "image": "../../assets/accessoryImages/xboxHeadset.jpg",
+      "description": "Defeat all your enemies using superior sound design",
+      "platform": "xbox"
+    }
+  ],
+  "electronics": [
+    {
+      "id": 1,
+      "name": "Playstation Bundle",
+      "price": 199.99,
+      "image": "../../assets/electronicImages/playstationBundle.jpg",
+      "description": "Playstation bundle with controller and games",
+      "platform": "playstation"
+    },
+    {
+      "id": 2,
+      "name": "Nintendo Switch Bundle",
+      "price": 199.99,
+      "image": "../../assets/electronicImages/switchBundle.jpg",
+      "description": "Nintendo Switch with controllers and games",
+      "platform": "wii"
+    },
+    {
+      "id": 3,
+      "name": "Xbox One Pro",
+      "price": 299.99,
+      "image": "../../assets/electronicImages/xbox.jpg",
+      "description": "Xbox One Pro with 1TB of storage",
+      "platform": "xbox"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "name": "Call of Duty: Modern Warfare",
+      "price": 49.99,
+      "image": "../../assets/videoGameImages/codMW.jpg",
+      "description": "Newest game in the Call of Duty series",
+      "platform": "xbox"
+    },
+    {
+      "id": 2,
+      "name": "Zelda: Breath of the Wild",
+      "price": 49.99,
+      "image": "../../assets/videoGameImages/botw.jpeg",
+      "description": "Best of the series. Voted game of the year",
+      "platform": "wii"
+    },
+    {
+      "id": 3,
+      "name": "Borderlands 3",
+      "price": 59.99,
+      "image": "../../assets/videoGameImages/borderlands3.jpg",
+      "description": "Newest in the series. Crazier than the first two",
+      "platform": "xbox"
+    },
+    {
+      "id": 4,
+      "name": "Xbox Controller",
+      "price": 19.99,
+      "image": "../../assets/accessoryImages/xboxController.jpg",
+      "description": "Standard Xbox controller",
+      "platform": "xbox"
+    }
+  ]
 }

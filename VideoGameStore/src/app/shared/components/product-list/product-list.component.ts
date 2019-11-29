@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../../interfaces/product.interface';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-list',
@@ -13,4 +13,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onAddedToCart(product: Product){
+    
+  }
 }

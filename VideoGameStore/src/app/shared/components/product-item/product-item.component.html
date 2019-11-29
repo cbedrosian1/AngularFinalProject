@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+    <img src="{{product.image}}" class="card-img-top" alt="{{product.description}}">
+    <div class="card-body">
+        
+        <div class="row text-center">
+                
+            <div class="col-12">
+                    <h6 class="card-title">{{product.name}}</h6>
+                <a role="button" class="btn btn-primary" data-toggle="modal" attr.data-target="#modal{{product.id}}">
+                    Quick View
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<app-detail-modal [productToView]="product"></app-detail-modal>
