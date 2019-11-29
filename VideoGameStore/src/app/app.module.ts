@@ -4,31 +4,34 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { VideoGameListComponent } from './video-game-list/video-game-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { AccessoriesComponent } from './accessories/accessories.component';
-import { ElectronicsComponent } from './electronics/electronics.component';
-import { CarouselItemComponent } from './carousel-item/carousel-item.component';
+import { CarouselItemComponent } from './home/carousel-item/carousel-item.component';
+import { AccessoriesListComponent } from './inventory/accessories/accessories-list/accessories-list.component';
+import { ElectronicsListComponent } from './inventory/electronics/electronics-list/electronics-list.component';
+import { VideoGamesListComponent } from './inventory/video-games/video-games-list/video-games-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductListComponent } from './shared/components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideoGameListComponent,
     NavbarComponent,
     HomeComponent,
-    AccessoriesComponent,
-    ElectronicsComponent,
-    CarouselItemComponent
+    CarouselItemComponent,
+    AccessoriesListComponent,
+    ElectronicsListComponent,
+    VideoGamesListComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
-      {path: 'video-game-list', component: VideoGameListComponent},
-      {path: 'accessories', component: AccessoriesComponent},
-      {path: 'electronics', component: ElectronicsComponent},
+      {path: 'video-games-list', component: VideoGamesListComponent},
+      {path: 'electronics-list', component: ElectronicsListComponent},
+      {path: 'accessories-list', component: AccessoriesListComponent},
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: '**', redirectTo: 'home', pathMatch: 'full'}
     ])

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { VideoGame } from 'src/app/shared/models/video-game.model';
 
 @Component({
   selector: 'app-carousel-item',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselItemComponent implements OnInit {
 
+  @Input() videoGame: VideoGame;
   constructor() { }
 
   ngOnInit() {

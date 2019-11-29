@@ -1,0 +1,79 @@
+{
+    "videoGames": [
+        {
+            "id": 1,
+            "title": "Call of Duty: Modern Warfare",
+            "price": 59.99,
+            "image": "../../assets/videoGameImages/codMW.jpg",
+            "description": "Newest game in the Call of Duty series",
+            "platform": "xbox"
+
+        },
+        {
+            "id": 2,
+            "title": "Zelda: Breath of the Wild",
+            "price": 59.99,
+            "image": "../../assets/videoGameImages/botw.jpeg",
+            "description": "Best of the series. Voted game of the year",
+            "platform": "wii"
+        },
+        {
+            "id": 3,
+            "title": "Apex Legends",
+            "price": 59.99,
+            "image": "../../assets/videoGameImages/apex.jpg",
+            "description": "Play with your friends and be the last ones standing",
+            "platform": "xbox"
+        },
+        {
+            "id": 4,
+            "title": "Star Wars Jedi: Fallen Order",
+            "price": 59.99,
+            "image": "../../assets/videoGameImages/starwars.jpg",
+            "description": "Excellent Single Player Campaign",
+            "platform": "xbox"
+        },
+        {
+            "id": 5,
+            "title": "Borderlands 3",
+            "price": 59.99,
+            "image": "../../assets/videoGameImages/borderlands3.jpg",
+            "description": "Newest in the series. Crazier than the first two",
+            "platform": "xbox"
+        }
+    ],
+    "accessories": [
+        {
+            "id": 1,
+            "title": "Xbox Controller",
+            "price": 19.99,
+            "image": "../../assets/videoGameImages/codMW.jpg",
+            "description": "Standard Xbox controller",
+            "platform": "xbox"
+        },
+        {
+            "id": 2,
+            "title": "Elite Xbox Controller",
+            "price": 49.99,
+            "image": "../../assets/videoGameImages/codMW.jpg",
+            "description": "Elite Xbox controller",
+            "platform": "xbox"
+        },
+        {
+            "id": 3,
+            "title": "Playstation Controller",
+            "price": 19.99,
+            "image": "../../assets/videoGameImages/codMW.jpg",
+            "description": "Standard Playstation controller",
+            "platform": "playstation"
+        },
+        {
+            "id": 4,
+            "title": "Elite Playstation Controller",
+            "price": 49.99,
+            "image": "../../assets/videoGameImages/codMW.jpg",
+            "description": "Elite Playstation controller",
+            "platform": "playstation"
+        }
+    ]
+}
