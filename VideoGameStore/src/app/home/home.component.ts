@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VideoGame } from '../shared/models/video-game.model';
 import { StoreService } from '../services/store.service';
+import { Product } from '../shared/models/product.model';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { StoreService } from '../services/store.service';
 })
 export class HomeComponent implements OnInit {
 
-  carouselItems: VideoGame[];
+  carouselItems: Product[];
   constructor(private storeService: StoreService) { }
 
   ngOnInit() {

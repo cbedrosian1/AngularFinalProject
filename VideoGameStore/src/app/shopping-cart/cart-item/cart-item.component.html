@@ -1,15 +1,86 @@
-<div class="row" width="100%;">
-    <div class="col-5 d-flex align-items-center">
+<div class="row d-flex align-items-center" *ngIf="innerWidth > 991">
+    <div class="col-2 ">
         <img src="{{product.image}}" alt="{{product.description}}">
     </div>
-    <div class="col-2 d-flex align-items-center">
+    <div class="col-3">
+        <ul>
+            <li>Platform: {{product.platform | uppercase}}</li>
+            <li>{{product.description}}</li>
+        </ul>
+    </div>
+    <div class="col-2">
         {{product.price | currency}}
     </div>
-    <div class="col-3 d-flex align-items-center">
-        <span><button><i class="fas fa-minus"></i></button><input type="text" value="1"><button><i
-                    class="fas fa-plus"></i></button></span>
+    <div class="col-2">
+        <form [formGroup]="form">
+            <button class="qtyForm" (click)="decrementQuantity()"><i class="fas fa-minus"></i></button>
+            <input type="text" formControlName="quantity" class="form-control qtyForm"
+                [ngClass]="{ 'is-invalid': submitted && fields.quantity.errors }">
+            <button class="qtyForm" (click)="incrementQuantity()"> <i class="fas fa-plus"></i></button>
+        </form>
     </div>
-    <div class="col-2 d-flex align-items-center">
-        text
+
+    <div class="col-2">
+        {{totalPrice | currency}}
+    </div>
+    <div class="col-1">
+        <button data-toggle="modal" attr.data-target="#confirmationModal{{product.id}}"><i
+                class="fas fa-trash-alt"></i></button>
     </div>
 </div>
+
+<div class="row d-flex align-items-center" *ngIf="innerWidth <= 991 && innerWidth > 767">
+    <div class="col-3">
+        <img src="{{product.image}}" alt="{{product.description}}">
+    </div>
+    <div class="col-4">
+        <ul>
+            <li *ngIf="innerWidth > 480">{{product.description}}</li>
+            <li>Platform: {{product.platform | uppercase}}</li>
+            <li>Price: {{product.price | currency}}</li>
+        </ul>
+    </div>
+    <div class="col-5">
+        <ul>
+            <li>
+                <form [formGroup]="form">
+                    <button class="qtyForm" (click)="decrementQuantity()"><i class="fas fa-minus"></i></button>
+                    <input type="text" formControlName="quantity" class="form-control qtyForm"
+                        [ngClass]="{ 'is-invalid': submitted && fields.quantity.errors }">
+                    <button class="qtyForm" (click)="incrementQuantity()"> <i class="fas fa-plus"></i></button>
+                </form>
+            </li>
+            <li>Total Price: {{totalPrice | currency}} <button data-toggle="modal"
+                    attr.data-target="#confirmationModal{{product.id}}"><i class="fas fa-trash-alt"></i></button></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row d-flex align-items-center" *ngIf="innerWidth <= 767">
+    <div class="col-12">
+        <img src="{{product.image}}" alt="{{product.description}}">
+    </div>
+    <div class="col-12">
+        <ul>
+            <li *ngIf="innerWidth > 480">{{product.description}}</li>
+            <li>Platform: {{product.platform | uppercase}}</li>
+            <li>Price: {{product.price | currency}}</li>
+        </ul>
+    </div>
+    <div class="col-12">
+        <ul>
+            <li>
+                <form [formGroup]="form">
+                    <button class="qtyForm" (click)="decrementQuantity()"><i class="fas fa-minus"></i></button>
+                    <input type="text" formControlName="quantity" class="form-control qtyForm"
+                        [ngClass]="{ 'is-invalid': submitted && fields.quantity.errors }">
+                    <button class="qtyForm" (click)="incrementQuantity()"> <i class="fas fa-plus"></i></button>
+                </form>
+            </li>
+            <li>Total Price: {{totalPrice | currency}} <button data-toggle="modal"
+                    attr.data-target="#confirmationModal{{product.id}}"><i class="fas fa-trash-alt"></i></button></li>
+        </ul>
+    </div>
+</div>
+
+<app-confirmation-modal [product]="product"></app-confirmation-modal>

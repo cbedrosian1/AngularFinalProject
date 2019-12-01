@@ -20,7 +20,7 @@ export class StoreService {
     private cartUrl = 'http://localhost:3000/cart';
 
     constructor(private http: HttpClient) { }
- 
+
     getVideoGames(): Observable<Product[]> {
         return this.http.get<Product[]>(this.gameUrl).pipe(
             tap(data => console.log('All ')),
@@ -45,14 +45,14 @@ export class StoreService {
     addToCart(product: Product): Observable<Product> {
         return this.http.post<Product>(this.cartUrl, product, this.httpOptions).pipe(
             tap(
-              (car) =>{
-                console.log("POST call successful value returned in body",
-                catchError(this.handleError))
-              }
+                (car) => {
+                    console.log("POST call successful value returned in body",
+                        catchError(this.handleError))
+                }
             )
-          );
+        );
     }
-    
+
     getCart(): Observable<Product[]> {
         return this.http.get<Product[]>(this.cartUrl).pipe(
             tap(data => console.log('All ')),
@@ -69,4 +69,31 @@ export class StoreService {
         }
         return throwError('Something bad happened; please try again later.');
     };
+
+    deleteProduct(product: Product): Observable<Product> {
+        let id = product.id;
+        let tempUrl = `${this.cartUrl}/${id}`;
+
+        return this.http.delete<Product>(tempUrl, this.httpOptions).pipe(
+            tap((car) => {
+                console.log("Delete call successful")
+            }),
+            catchError(this.handleError)
+        );
+    }
+
+    updateProductQuantity(product: Product): Observable<Product> {
+        let tempUrl = this.cartUrl + `/${product.id}`
+        return this.http.put<Product>(tempUrl, product, this.httpOptions).pipe(
+            tap(
+                (car) => {
+                    console.log("POST call successful value returned in body",
+                        catchError(this.handleError))
+                }
+            )
+        );
+
+    }S
+
+
 }

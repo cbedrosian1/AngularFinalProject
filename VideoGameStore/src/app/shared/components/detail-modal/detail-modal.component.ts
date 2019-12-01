@@ -12,7 +12,6 @@ import { Observable } from 'rxjs';
 export class DetailModalComponent implements OnInit {
 
   @Input() productToView: Product;
-  cart: Product[];
   constructor(private service: StoreService) { }
 
   ngOnInit() {
@@ -20,7 +19,6 @@ export class DetailModalComponent implements OnInit {
 
   addToCart(product: Product) {
     this.service.getCart().subscribe(cart => {
-      this.cart = cart;
       const tempProduct = {...product};
       let maxId = Math.max(...cart.map(product => product.id), 1);
       tempProduct.id = maxId + 1;

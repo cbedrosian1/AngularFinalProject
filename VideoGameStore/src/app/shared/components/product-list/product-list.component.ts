@@ -12,8 +12,4 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  onAddedToCart(product: Product){
-    
-  }
 }
