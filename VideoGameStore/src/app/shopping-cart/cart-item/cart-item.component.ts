@@ -2,6 +2,7 @@ import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Product } from 'src/app/shared/models/product.model';
 import { FormControl, Validators, Form, FormGroup, FormBuilder } from '@angular/forms';
 import { StoreService } from 'src/app/services/store.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-item',
@@ -15,7 +16,7 @@ export class CartItemComponent implements OnInit {
   innerWidth: number;
   form: FormGroup;
   oldValue: number;
-  constructor(private service: StoreService, private fb: FormBuilder) { }
+  constructor(private service: StoreService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.innerWidth = window.innerWidth;
@@ -56,7 +57,11 @@ export class CartItemComponent implements OnInit {
     }
     this.totalPrice = this.fields.quantity.value * this.product.price;
     this.product.quantity = this.fields.quantity.value;
-    this.service.updateProductQuantity(this.product).subscribe();
+    this.service.updateProductQuantity(this.product).subscribe(resp => {
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this.router.onSameUrlNavigation = 'reload';
+      this.router.navigate(['/shopping-cart']);
+    });
 
    }
 
@@ -66,6 +71,10 @@ export class CartItemComponent implements OnInit {
     this.fields.quantity.setValue(+tempQty + 1);
     this.totalPrice = this.fields.quantity.value * this.product.price;
     this.product.quantity = this.fields.quantity.value;
-    this.service.updateProductQuantity(this.product).subscribe();
+    this.service.updateProductQuantity(this.product).subscribe(resp => {
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this.router.onSameUrlNavigation = 'reload';
+      this.router.navigate(['/shopping-cart']);
+    });
   }
 }
