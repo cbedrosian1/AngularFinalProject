@@ -2,7 +2,6 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { VideoGame } from '../shared/models/video-game.model';
 import { Product } from '../shared/models/product.model';
 
 
@@ -93,7 +92,6 @@ export class StoreService {
             )
         );
 
-    }S
-
+    }
 
 }

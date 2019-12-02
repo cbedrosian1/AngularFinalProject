@@ -12,7 +12,7 @@
                                 formControlName="firstName">
                         </div>
                     </div>
-                    <div class="row" *ngIf="fields.firstName.invalid && fields.firstName.touched">
+                    <div class="row" *ngIf="fields.firstName?.invalid && fields.firstName.touched">
                         <div class="col">
                             <small id="helpBlock" class="form-text" *ngIf="fields.firstName.errors.required">First name
                                 is required
@@ -25,7 +25,7 @@
                                 formControlName="lastName">
                         </div>
                     </div>
-                    <div class="row" *ngIf="fields.lastName.invalid && fields.lastName.touched">
+                    <div class="row" *ngIf="fields.lastName?.invalid && fields.lastName.touched">
                         <div class="col">
                             <small id="helpBlock" class="form-text" *ngIf="fields.lastName.errors.required">Last
                                 name
@@ -40,7 +40,7 @@
                                 formControlName="addressOne">
                         </div>
                     </div>
-                    <div class="row" *ngIf="fields.addressOne.invalid && fields.addressOne.touched">
+                    <div class="row" *ngIf="fields.addressOne?.invalid && fields.addressOne.touched">
                         <div class="col">
                             <small id="helpBlock" class="form-text" *ngIf="fields.addressOne.errors.required">Address
                                 is required
@@ -60,7 +60,7 @@
                                 formControlName="city">
                         </div>
                     </div>
-                    <div class="row" *ngIf="fields.city.invalid && fields.city.touched">
+                    <div class="row" *ngIf="fields.city?.invalid && fields.city.touched">
                         <div class="col">
                             <small id="helpBlock" class="form-text" *ngIf="fields.city.errors.required">City
                                 is required
@@ -134,7 +134,7 @@
                                     formControlName="zipCode">
                             </div>
                         </div>
-                        <div class="row" *ngIf="fields.zipCode.invalid && fields.zipCode.touched">
+                        <div class="row" *ngIf="fields.zipCode?.invalid && fields.zipCode.touched">
                             <div class="col">
                                 <small id="helpBlock" class="form-text" *ngIf="fields.zipCode.errors.required">Zip Code
                                     is required
@@ -144,7 +144,7 @@
                         </div>
                         <div class="row" >
                                 <div class="col">
-                                    <small *ngIf="fields.zipCode.errors.invalid && !fields.zipCode.errors.required" id="helpBlock" class="form-text">Invalid
+                                    <small *ngIf="fields.zipCode.errors?.invalid && !fields.zipCode.errors.required" id="helpBlock" class="form-text">Invalid
                                         zip code</small>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                                 formControlName="email">
                         </div>
                     </div>
-                    <div class="row" *ngIf="fields.email.invalid && fields.email.touched">
+                    <div class="row" *ngIf="fields.email?.invalid && fields.email.touched">
                         <div class="col">
                             <small id="helpBlock" class="form-text" *ngIf="fields.email.errors.required">Email
                                 is required
@@ -164,7 +164,7 @@
                     </div>
                     <div class="row" >
                             <div class="col">
-                                <small *ngIf="fields.email.errors.invalid && !fields.email.errors.required" id="helpBlock" class="form-text">Invalid
+                                <small *ngIf="fields.email.errors?.invalid && !fields.email.errors.required" id="helpBlock" class="form-text">Invalid
                                     email</small>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                                 formControlName="phoneNumber">
                         </div>
                     </div>
-                    <div class="row" *ngIf="fields.phoneNumber.invalid && fields.phoneNumber.touched">
+                    <div class="row" *ngIf="fields.phoneNumber?.invalid && fields.phoneNumber.touched">
                         <div class="col">
                             <small id="helpBlock" class="form-text" *ngIf="fields.phoneNumber.errors.required">Phone
                                 Number
@@ -185,7 +185,7 @@
                     </div>
                     <div class="row" >
                             <div class="col">
-                                <small *ngIf="fields.phoneNumber.errors.invalidPhone && !fields.phoneNumber.errors.required" id="helpBlock" class="form-text">Invalid
+                                <small *ngIf="fields.phoneNumber.errors?.invalidPhone && !fields.phoneNumber.errors.required" id="helpBlock" class="form-text">Invalid
                                     phone number</small>
                             </div>
                         </div>

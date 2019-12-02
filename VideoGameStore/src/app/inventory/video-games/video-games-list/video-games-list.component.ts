@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
-import { VideoGame } from 'src/app/shared/models/video-game.model';
+import { Product } from 'src/app/shared/models/product.model';
 
 @Component({
   selector: 'app-video-games-list',
@@ -9,7 +9,7 @@ import { VideoGame } from 'src/app/shared/models/video-game.model';
 })
 export class VideoGamesListComponent implements OnInit {
 
-  videoGames: VideoGame[];
+  videoGames: Product[];
   constructor(private service: StoreService) { }
 
   ngOnInit() {
